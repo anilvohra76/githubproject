@@ -51,6 +51,7 @@ async function apicall(data) {
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
+        
 
         const result = await response.json();
         console.log("API Success:", result);
