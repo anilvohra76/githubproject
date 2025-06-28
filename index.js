@@ -51,7 +51,7 @@ async function apicall(data) {
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        
+
 
         const result = await response.json();
         console.log("API Success:", result);
@@ -59,6 +59,7 @@ async function apicall(data) {
     } catch (error) {
         console.error("API Error:", error);
         return { error: error.message }; // return error object
+        
     }
 }
 
