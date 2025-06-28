@@ -1,0 +1,15 @@
+{
+  "name": "saralupload",
+  "version": "1.0.0",
+  "description": "saral data upload",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "author": "Anil Vohra",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mssql": "^11.0.1"
+  }
+}

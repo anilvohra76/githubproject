@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trigger API Call</title>
+</head>
+<body>
+    <h1>Trigger SaralBulkUpload API</h1>
+    <button onclick="triggerApi()">Click to Upload Data</button>
+
+    <h3>API Response:</h3>
+    <pre id="apiResponse">Waiting for response...</pre>
+
+    <script>
+        function triggerApi() {
+            document.getElementById("apiResponse").textContent = "Calling API...";
+            
+            fetch('/trigger-api', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("apiResponse").textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                document.getElementById("apiResponse").textContent = "Error: " + error;
+            });
+        }
+    </script>
+</body>
+</html>
